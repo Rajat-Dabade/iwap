@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transaction Details</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/sb-admin-2.css">
+    <link href="/assets/sb-admin.css" rel="stylesheet">
+</head>
+<body>
+
+	<% include partials/nav.ejs %>
+	<% var i =0 ; %>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-7">
+				<div class="panel panel-default">
+                        <div class="panel-heading">
+                            Transaction of <%= mysession%>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive table-bordered">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Withdrawal</th>
+                                            <th>Deposit</th>
+                                            <th>Remaining Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    	<% while(i < data.length){%>
+                                        <tr>
+                                            <td><%=i+1%></td>
+                                            <td><%= data[i].withdrawal; %></td>
+                                            <td><%= data[i].deposit; %></td>
+                                            <td><%= data[i].remaining_amt; %></td>
+                                        </tr>
+                                        <% i++; %>
+										<% } %>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+			</div>
+		</div>
+                    
+                    <!-- /.panel -->
+</div>
+	
+
+
+
+
+</body>
+</html>

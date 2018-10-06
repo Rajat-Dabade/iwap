@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transaction</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/sb-admin-2.css">
+    <link href="/assets/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/metisMenu.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap.min.css">
+</head>
+<body>
+
+	<% include partials/nav.ejs %>
+
+	<div class="container" style="margin-top: 50px;">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+                            Transaction Details
+                    </div>
+                    <div class="panel-body">
+                    	<form action="/transaction" method="post">
+	                    	<label>ACCOUT NUMBER</label>
+	              			<div class="form-group input-group">
+						        <input type="text" class="form-control" name="acNumber">
+						        <span class="input-group-btn">
+						            <button class="btn btn-default" type="submit">Search
+						            </button>
+						        </span>
+						    </div>
+						</form>
+                    </div>
+				</div>
+			</div>
+
+		</div>
+    </div>
+
+</body>
+</html>
